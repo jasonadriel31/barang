@@ -21,10 +21,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::middleware('role:admin')->get('/dashboard', function(){
-    return view('barang.addbarang');
-})->name('dashboard');
-Route::get('/sashboard', function(){
-    return 'Sashboard';
-})->name('sashboard');
+Route::get('/profile', function(){
+    return view('profile');
+})->name('profile');
+Route::get('/portofolio', function(){
+    return view('porto');
+})->name('portofolio');
 Route::resource('/barang','BarangController');
